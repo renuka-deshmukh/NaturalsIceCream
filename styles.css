@@ -1,4 +1,4 @@
-*{
+ *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -55,17 +55,25 @@ body{
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    /* border: 1px solid red; */
+    position: relative;
+    width: 25rem;
+    height: 3rem;
 }
 
 .search-box {
-    width: 300px;
+    width: 100%;
     font-size: 16px;
     padding: 10px;
     border: none;
     background-color: rgb(240, 234, 234);
     border-radius: 5px;
+    height: 3rem;
 }
-
+.searchDiv{
+    position: absolute;
+    right: 1%;
+}
 .search-btn {
     background-color: rgb(27, 145, 52);
     border: none;
@@ -75,7 +83,7 @@ body{
 }
 
 .search-btn i {
-    font-size: 18px;
+    font-size: 1rem;
     color: white;
 }
 
@@ -237,6 +245,7 @@ h1{
     margin: 20px auto;
     display: flex;
     justify-content: space-evenly;
+    border: 1px solid red;
 }
 
 .green-btn{
@@ -259,37 +268,48 @@ h1{
     padding: 7px 15px;
     margin-left: 10px;
 }
-
+.read-more:hover{
+    background-color:rgb(27, 145, 52);
+}
 .card{
     width: 18rem;
-    /* border: 1px solid rgb(222, 222, 222); */
+    border: 1px solid rgb(28, 13, 231);
     /* box-shadow: 2px 2px 2px 1px gray; */
     border-radius: 3px;
     background-color: white;
     height: 400px;
     overflow: hidden;
+    position: relative;
+}
+.card .imgDiv{
+    border: 1px solid greenyellow;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
 }
 .card img{
     width:100%;
     border-radius: 3px;
+    transition: transform .5s;
 }
 .card h3{
-    text-align: center;
-    margin: 15px;
-    margin-top: 40px;
+    position: absolute;
+    left: 30%;
+
 }
+.card img:hover{
+    transform: scale(1.1);
+}
+
 .btns{
     display: none;
+    position:absolute;
+    bottom: 1rem;
 }
 .card:hover .btns{
     display: block;
 }
-.imgTransitions{
-    transition: transform .5s;
-}
-.imgTransitions:hover{
-    transform: scale(1.1);
-}
+
 
 .three-imgs img{
       width: 87%;
